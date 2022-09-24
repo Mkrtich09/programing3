@@ -1,52 +1,6 @@
-function matrixGenerator(matrixSize,grassCount,grEatCount,predatorCount){
-          let matrix = [];
-
-            for(let i = 0; i < matrixSize;i++){
-                    matrix[i] = []
-                for(let j = 0; j < matrixSize; j++){
-                        matrix[i][j] = 0;
-                }
-            }
-
-            for(let i = 0 ; i < grassCount; i++ ){
-                  
-                 let x  = Math.floor(Math.random() * matrixSize)
-                 let y  = Math.floor(Math.random() * matrixSize)
-
-                       if(matrix[y][x] == 0){
-                           matrix[y][x] = 1;
-                       }
-
-            }
-
-            for(let i = 0 ; i < grEatCount; i++ ){
-                  
-               let x  = Math.floor(Math.random() * matrixSize)
-               let y  = Math.floor(Math.random() * matrixSize)
-
-                     if(matrix[y][x] == 0){
-                         matrix[y][x] = 2;
-                     }
-
-          }
-          for(let i = 0 ; i < predatorCount; i++ ){
-                  
-               let x  = Math.floor(Math.random() * matrixSize)
-               let y  = Math.floor(Math.random() * matrixSize)
-
-                     if(matrix[y][x] == 0){
-                         matrix[y][x] = 3;
-                     }
-
-          }
+var io = io()
 
 
-       return matrix ;     
-}
-
-
-
-let matrix = matrixGenerator(20,15,20,25);
 console.log(matrix);
 
 var side = 35;
